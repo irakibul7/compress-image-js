@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Variables */
+:root {
+  --blue: #ff0fa3;
+  --blue-text: #770d54;
+  --blue-bg: #fddede;
+  --white: #ffffff;
+  --secondary: #d9e3eb;
+  --secondary-text: #270911;
+  --black: #000;
+}
+
+/* Default Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--blue-bg);
+  font-family: "Manrope", sans-serif;
+}
+
+#header {
+  width: 100%;
+}
+#header > div,
+#img_section {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+}
+#logo {
+  margin-left: 10px;
+}
+#header a {
+  line-height: 3;
+  font-size: 28px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+}
+.card {
+  max-width: 768px;
+  padding: 32px;
+  text-align: center;
+  margin: 20px;
+  margin-top: 90px;
+  border-radius: 32px;
+  background: var(--white);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.02);
+}
+.card__content {
+  padding: 56px;
+  border: medium dashed var(--secondary);
+  border-radius: 16px;
+}
+.card__content svg {
+  width: 100px;
+  color: var(--blue);
+}
+.card__content h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--blue-text);
+}
+.card__content h1 label {
+  color: var(--blue);
+  cursor: pointer;
+  user-select: none;
+}
+.card__content p {
+  font-size: 14px;
+  padding: 1px;
+  color: var(--secondary-text);
+}
+.card__content p span {
+  font-weight: bold;
+}
+#img_preview,
+#img_preview2 {
+  display: none;
+  margin: auto;
+  max-width: 450px;
+  max-height: 450px;
+  margin-bottom: 20px;
+}
+#img_preview img,
+#img_preview2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+[type="file"] {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+[type="file"] + label {
+  font-family: sans-serif;
+  background: #f44336;
+  padding: 10px 30px;
+  border: 2px solid #f44336;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+[type="file"] + label:hover {
+  background-color: #fff;
+  color: #f44336;
+}
